@@ -1,0 +1,11 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/auth/[...all]/route": "/api/auth/[...all]",
+  "/api/files/[id]/download/route": "/api/files/[id]/download",
+  "/api/overview/route": "/api/overview",
+  "/api/uploads/route": "/api/uploads",
+  "/api/workspaces/route": "/api/workspaces",
+  "/favicon.ico/route": "/favicon.ico",
+  "/page": "/"
+}

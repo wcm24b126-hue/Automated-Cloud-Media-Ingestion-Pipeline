@@ -1,0 +1,12 @@
+var R=require("../../../chunks/[turbopack]_runtime.js")("server/app/api/uploads/route.js")
+R.c("server/chunks/[root-of-the-server]__0kj7cy8._.js")
+R.c("server/chunks/_0nl9ldl._.js")
+R.c("server/chunks/node_modules_@aws-sdk_s3-request-presigner_dist-es_getSignedUrl_09fcafy.js")
+R.c("server/chunks/node_modules_@better-auth_0zj8hkt._.js")
+R.c("server/chunks/[root-of-the-server]__18_7bjm._.js")
+R.c("server/chunks/node_modules_0onoa_w._.js")
+R.c("server/chunks/node_modules_11wf7dr._.js")
+R.c("server/chunks/[root-of-the-server]__02_2sm-._.js")
+R.c("server/chunks/_next-internal_server_app_api_uploads_route_actions_0w1331t.js")
+R.m(35868)
+module.exports=R.m(35868).exports

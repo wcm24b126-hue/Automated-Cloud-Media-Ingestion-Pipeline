@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "functions": {
+    "/api/files/[id]/download": {},
+    "/api/overview": {},
+    "/api/uploads": {},
+    "/api/workspaces": {}
+  }
+}

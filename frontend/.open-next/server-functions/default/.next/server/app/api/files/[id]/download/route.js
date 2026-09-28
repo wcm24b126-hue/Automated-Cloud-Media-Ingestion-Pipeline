@@ -1,0 +1,12 @@
+var R=require("../../../../../chunks/[turbopack]_runtime.js")("server/app/api/files/[id]/download/route.js")
+R.c("server/chunks/[root-of-the-server]__1pe80sw._.js")
+R.c("server/chunks/[root-of-the-server]__09r4vw1._.js")
+R.c("server/chunks/node_modules_@aws-sdk_s3-request-presigner_dist-es_getSignedUrl_09fcafy.js")
+R.c("server/chunks/node_modules_@better-auth_0zj8hkt._.js")
+R.c("server/chunks/[root-of-the-server]__0jmivwq._.js")
+R.c("server/chunks/node_modules_11wf7dr._.js")
+R.c("server/chunks/node_modules_0onoa_w._.js")
+R.c("server/chunks/[root-of-the-server]__02_2sm-._.js")
+R.c("server/chunks/_next-internal_server_app_api_files_[id]_download_route_actions_181luwg.js")
+R.m(91098)
+module.exports=R.m(91098).exports

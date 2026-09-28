@@ -1,0 +1,43 @@
+networks:
+  media_net:
+    driver: bridge
+
+services:
+  localstack:
+    image: localstack/localstack-pro:latest
+    container_name: localstack_media
+    ports:
+      - "4566:4566"
+    environment:
+      SERVICES: s3
+      AWS_DEFAULT_REGION: ap-south-1
+      LOCALSTACK_AUTH_TOKEN: ${LOCALSTACK_AUTH_TOKEN:?Set LOCALSTACK_AUTH_TOKEN in .env}
+    volumes:
+      - ./infra/localstack-init.sh:/etc/localstack/init/ready.d/init.sh:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    network_mode: bridge
+
+  postgres-media:
+    image: postgres:16-alpine
+    container_name: postgres_media
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: mediadb
+      POSTGRES_USER: pipeline_user
+      POSTGRES_PASSWORD: pipeline_secure_pass
+    volumes:
+      - ./infra/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - media_net
+
+  clamav:
+    image: clamav/clamav:stable
+    container_name: clamav_media
+    restart: unless-stopped
+    profiles:
+      - malware-scan
+    ports:
+      - "127.0.0.1:3310:3310"
+    networks:
+      - media_net
